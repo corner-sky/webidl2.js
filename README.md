@@ -53,6 +53,18 @@ In the browser:
 </script>
 ```
 
+`write()` supports returning document tree instead of a simple string.
+
+```js
+WebIDL2.write(tree, {
+  document: (doc, children) => {},
+  idlType: (type, children) => {},
+  extAttrs: () => {},
+  operation: () => {},
+  ...
+})
+```
+
 ### Errors
 
 When there is a syntax error in the WebIDL, it throws an exception object with the following
